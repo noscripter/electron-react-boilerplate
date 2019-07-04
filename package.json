@@ -14,7 +14,9 @@
     "start": "electron .",
     "start-hot": "HOT=1 NODE_ENV=development electron .",
     "package": "NODE_ENV=production node package.js",
-    "package-all": "npm run package -- --all"
+    "package-all": "npm run package -- --all",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "bin": {
     "electron": "./node_modules/.bin/electron"
@@ -98,6 +100,8 @@
     "react-router": "^1.0.0",
     "redux": "^3.0.4",
     "redux-promise": "^0.5.0",
-    "redux-thunk": "^1.0.0"
-  }
+    "redux-thunk": "^1.0.0",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
